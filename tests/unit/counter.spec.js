@@ -23,4 +23,10 @@ describe('HelloWorld.vue', () => {
     wrapper.find('.decrease').trigger('click');
     expect(wrapper.find('.count').text()).toBe('-1');
   });
+
+  it('测试计数器computed total', () => {
+    const wrapper = shallowMount(Counter);
+    wrapper.find('.increase').trigger('click');
+    expect(wrapper.vm.total).toBe(11);
+  });
 });
