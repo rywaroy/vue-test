@@ -29,4 +29,16 @@ describe('HelloWorld.vue', () => {
     wrapper.find('.increase').trigger('click');
     expect(wrapper.vm.total).toBe(11);
   });
+
+  it('测试计数器filter numberType', () => {
+    const wrapper = shallowMount(Counter);
+    wrapper.find('.increase').trigger('click');
+    expect(wrapper.find('.type').text()).toBe('正数');
+  });
+
+  it('测试计数器filter numberType', () => {
+    const wrapper = shallowMount(Counter);
+    wrapper.find('.decrease').trigger('click');
+    expect(wrapper.find('.type').text()).toBe('负数');
+  });
 });
