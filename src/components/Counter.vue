@@ -10,7 +10,10 @@
 </template>
 
 <script>
+import counterMixin from '@/mixins/counter';
+
 export default {
+  mixins: [counterMixin],
   props: {
     title: {
       type: String,
