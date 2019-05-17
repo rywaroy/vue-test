@@ -6,6 +6,7 @@
     <p class="type">{{count | numberType}}</p>
     <p class="total">{{base}} + {{count}} = {{total}}</p>
     <div class="decrease" @click="decrease()">减</div>
+    <button class="emit" @click="emit()">提交</button>
   </div>
 </template>
 
@@ -36,6 +37,9 @@ export default {
     },
     decrease() {
       this.count -= this.num;
+    },
+    emit() {
+      this.$emit('number', this.count);
     },
   },
   computed: {

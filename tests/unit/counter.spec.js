@@ -50,4 +50,11 @@ describe('HelloWorld.vue', () => {
     wrapper.vm.square();
     expect(wrapper.vm.count).toBe(9);
   });
+
+  it('测试计数器emit', () => {
+    const wrapper = shallowMount(Counter);
+    wrapper.find('.increase').trigger('click');
+    wrapper.find('.emit').trigger('click');
+    expect(wrapper.emitted('number')).toEqual([[1]]);
+  });
 });
