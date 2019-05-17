@@ -28,5 +28,5 @@ module.exports = {
     'jest-watch-typeahead/testname',
   ],
   collectCoverage: true,
-  collectCoverageFrom: ['**/components/*.vue', '!**/node_modules/**'],
+  collectCoverageFrom: ['**/components/*.vue', '**/mixins/*.js', '!**/node_modules/**'],
 };

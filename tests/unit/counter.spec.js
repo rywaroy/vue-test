@@ -41,4 +41,13 @@ describe('HelloWorld.vue', () => {
     wrapper.find('.decrease').trigger('click');
     expect(wrapper.find('.type').text()).toBe('负数');
   });
+
+  it('测试计数器mixin square', () => {
+    const wrapper = shallowMount(Counter);
+    wrapper.setData({
+      count: 3,
+    });
+    wrapper.vm.square();
+    expect(wrapper.vm.count).toBe(9);
+  });
 });
