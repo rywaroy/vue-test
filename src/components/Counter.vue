@@ -1,6 +1,7 @@
 <template>
   <div class="counter">
     <p class="title">{{title}}</p>
+    <p class="counter-id">{{$route.params.id}}</p>
     <div class="increase" @click="increase()">加</div>
     <p class="count">{{count}}</p>
     <p class="type">{{count | numberType}}</p>
